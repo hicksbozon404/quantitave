@@ -852,8 +852,370 @@
                         { text: "They are critical components with zero stockout tolerance.", isCorrect: false, explanation: "Critical components with zero stockout tolerance are typically 'Class A' items due to their high importance, not 'Class C'." }
                     ]
                 }
-                // NOTE: This is a sample set of 10 questions. To reach 50+ as requested,
-                // you would add more question objects following this structure.
+                // Add these to your existing theoryQuestions array in index.html
+
+                {
+                    question: "11. What is the main assumption of the Economic Order Quantity (EOQ) model regarding lead time?",
+                    options: [
+                        { text: "Lead time is highly variable.", isCorrect: false, explanation: "The basic EOQ model assumes a constant and known lead time to simplify calculations. Variability in lead time is addressed by safety stock." },
+                        { text: "Lead time is zero.", isCorrect: false, explanation: "While JIT aims for minimal lead time, EOQ assumes a specific, constant lead time, not necessarily zero." },
+                        { text: "Lead time is constant and known.", isCorrect: true },
+                        { text: "Lead time is inversely proportional to demand.", isCorrect: false, explanation: "The EOQ model does not assume an inverse relationship between lead time and demand." }
+                    ]
+                },
+                {
+                    question: "12. Which cost typically decreases as the order quantity increases?",
+                    options: [
+                        { text: "Holding cost.", isCorrect: false, explanation: "Holding costs *increase* as the order quantity increases because you're holding more inventory on average." },
+                        { text: "Shortage cost.", isCorrect: false, explanation: "Shortage costs are related to stockouts, not directly to order quantity in this context. They are generally assumed to be avoided by ordering." },
+                        { text: "Ordering cost.", isCorrect: true },
+                        { text: "Unit purchase cost.", isCorrect: false, explanation: "The basic EOQ model assumes unit purchase cost is constant and does not consider quantity discounts." }
+                    ]
+                },
+                {
+                    question: "13. What does 'shrinkage' refer to in the context of inventory costs?",
+                    options: [
+                        { text: "A reduction in product size due to packaging.", isCorrect: false, explanation: "Shrinkage refers to loss of inventory, not changes in product dimensions." },
+                        { text: "Loss of inventory due to theft, damage, or obsolescence.", isCorrect: true },
+                        { text: "A decrease in demand for a product.", isCorrect: false, explanation: "A decrease in demand affects sales and inventory turnover, but 'shrinkage' specifically refers to physical loss of stock." },
+                        { text: "The process of consolidating inventory from multiple warehouses.", isCorrect: false, explanation: "Consolidation is a logistics strategy, not related to inventory shrinkage." }
+                    ]
+                },
+                {
+                    question: "14. A company that adopts a Just-in-Time (JIT) inventory system primarily aims to:",
+                    options: [
+                        { text: "Increase safety stock levels.", isCorrect: false, explanation: "JIT aims to *minimize* inventory, including safety stock, by relying on precise timing and reliable supply." },
+                        { text: "Minimize inventory holding costs and waste.", isCorrect: true },
+                        { text: "Take advantage of large quantity discounts.", isCorrect: false, explanation: "JIT often involves frequent, smaller deliveries, which would typically not qualify for large quantity discounts." },
+                        { text: "Centralize all inventory in one large warehouse.", isCorrect: false, explanation: "JIT focuses on decentralized, flowing inventory, not necessarily centralized storage." }
+                    ]
+                },
+                {
+                    question: "15. Which of the following is a characteristic of a 'Class A' item in ABC Analysis?",
+                    options: [
+                        { text: "Low annual usage value, simple control.", isCorrect: false, explanation: "This describes 'Class C' items." },
+                        { text: "Medium annual usage value, moderate control.", isCorrect: false, explanation: "This describes 'Class B' items." },
+                        { text: "High annual usage value, tight control and frequent review.", isCorrect: true },
+                        { text: "Items that are obsolete or damaged.", isCorrect: false, explanation: "Obsolete or damaged items are a problem to be managed, not a classification criterion in ABC analysis." }
+                    ]
+                },
+                {
+                    question: "16. The Reorder Point (ROP) is the inventory level at which:",
+                    options: [
+                        { text: "A new order is received.", isCorrect: false, explanation: "ROP is the point at which an order is *placed*, not received. The order is received later, after the lead time." },
+                        { text: "Inventory is physically counted.", isCorrect: false, explanation: "Physical counts are part of periodic inventory systems, not the definition of ROP." },
+                        { text: "A new order should be placed.", isCorrect: true },
+                        { text: "The company runs out of stock.", isCorrect: false, explanation: "Running out of stock is a stockout, which ROP aims to prevent." }
+                    ]
+                },
+                {
+                    question: "17. What is the primary benefit of accurate demand forecasting in inventory management?",
+                    options: [
+                        { text: "It eliminates the need for any inventory.", isCorrect: false, explanation: "Even with accurate forecasts, some inventory is usually needed due to lead times and practicalities." },
+                        { text: "It guarantees 100% customer service level.", isCorrect: false, explanation: "Forecasts reduce uncertainty, but don't guarantee 100% service level, which would require infinite inventory." },
+                        { text: "It allows for more precise inventory levels and reduced costs.", isCorrect: true },
+                        { text: "It increases lead time from suppliers.", isCorrect: false, explanation: "Forecasting has no direct impact on supplier lead times." }
+                    ]
+                },
+                {
+                    question: "18. Which of the following is an example of an 'ordering cost'?",
+                    options: [
+                        { text: "Warehouse utilities.", isCorrect: false, explanation: "Warehouse utilities are a 'holding cost'." },
+                        { text: "Interest on inventory loans.", isCorrect: false, explanation: "Interest on inventory loans is a 'holding cost' (cost of capital)." },
+                        { text: "Processing a purchase order.", isCorrect: true },
+                        { text: "Spoilage of perishable goods.", isCorrect: false, explanation: "Spoilage is a 'holding cost'." }
+                    ]
+                },
+                {
+                    question: "19. The Days Sales of Inventory (DSI) measures:",
+                    options: [
+                        { text: "How many times inventory is sold in a year.", isCorrect: false, explanation: "This describes the Inventory Turnover Ratio (ITR)." },
+                        { text: "The average number of days it takes to sell inventory.", isCorrect: true },
+                        { text: "The percentage of sales lost due to stockouts.", isCorrect: false, explanation: "This relates to shortage costs or service level, not DSI." },
+                        { text: "The time it takes to receive an order from a supplier.", isCorrect: false, explanation: "This describes lead time." }
+                    ]
+                },
+                {
+                    question: "20. Why is 'cost of capital' considered a holding cost?",
+                    options: [
+                        { text: "Because it's the cost of transporting inventory.", isCorrect: false, explanation: "Transportation cost is an ordering cost." },
+                        { text: "Because it represents the lost opportunity from money tied up in inventory.", isCorrect: true },
+                        { text: "Because it's the cost of setting up a production line.", isCorrect: false, explanation: "Setup cost is an ordering cost." },
+                        { text: "Because it's the cost of damaged goods.", isCorrect: false, explanation: "Cost of damaged goods is a holding cost, but 'cost of capital' is a distinct component." }
+                    ]
+                },
+                {
+                    question: "21. What is a key assumption of the basic EOQ model regarding quantity discounts?",
+                    options: [
+                        { text: "Quantity discounts are always offered.", isCorrect: false, explanation: "The basic EOQ model *assumes no* quantity discounts." },
+                        { text: "Quantity discounts are ignored.", isCorrect: true },
+                        { text: "Quantity discounts increase holding costs.", isCorrect: false, explanation: "Quantity discounts reduce the per-unit purchase cost, but don't directly increase holding costs (though larger order quantities would)." },
+                        { text: "Quantity discounts are only for Class A items.", isCorrect: false, explanation: "This is not an assumption of the basic EOQ model." }
+                    ]
+                },
+                {
+                    question: "22. A company experiences highly variable lead times from its main supplier. To mitigate stockout risk, they should primarily increase their:",
+                    options: [
+                        { text: "Annual demand.", isCorrect: false, explanation: "Annual demand is a market factor, not something directly increased to mitigate lead time variability." },
+                        { text: "Ordering frequency.", isCorrect: false, explanation: "Increasing ordering frequency might reduce average inventory but doesn't directly address lead time variability risk; it might even expose you to more variable deliveries." },
+                        { text: "Safety stock.", isCorrect: true },
+                        { text: "Unit purchase cost.", isCorrect: false, explanation: "Unit purchase cost is not a factor for mitigating lead time variability." }
+                    ]
+                },
+                {
+                    question: "23. What is the primary disadvantage of a very low inventory turnover ratio?",
+                    options: [
+                        { text: "High customer satisfaction.", isCorrect: false, explanation: "A very low ITR means inventory isn't selling, potentially leading to dissatisfaction if desired products aren't fresh or available." },
+                        { text: "Efficient use of warehouse space.", isCorrect: false, explanation: "A low ITR means inventory sits longer, leading to inefficient use of warehouse space." },
+                        { text: "Increased capital tied up in inventory.", isCorrect: true },
+                        { text: "Reduced ordering costs.", isCorrect: false, explanation: "A low ITR might mean fewer orders, but the disadvantage is the capital tied up and potential obsolescence." }
+                    ]
+                },
+                {
+                    question: "24. In ABC Analysis, which class of items typically accounts for the largest percentage of the total number of items, but the smallest percentage of total inventory value?",
+                    options: [
+                        { text: "Class A.", isCorrect: false, explanation: "Class A items are the opposite: small number of items, large percentage of value." },
+                        { text: "Class B.", isCorrect: false, explanation: "Class B items are in the middle, not the largest percentage of items with smallest value." },
+                        { text: "Class C.", isCorrect: true },
+                        { text: "Class D.", isCorrect: false, explanation: "There is no 'Class D' in standard ABC analysis." }
+                    ]
+                },
+                {
+                    question: "25. Perpetual inventory systems provide which key advantage over periodic systems?",
+                    options: [
+                        { text: "They require less administrative effort.", isCorrect: false, explanation: "Perpetual systems typically require more continuous administrative effort for data entry and reconciliation." },
+                        { text: "They are simpler to implement for small businesses.", isCorrect: false, explanation: "Periodic systems are generally simpler for small businesses due to less overhead." },
+                        { text: "Real-time inventory balances.", isCorrect: true },
+                        { text: "They eliminate the need for physical counts.", isCorrect: false, explanation: "While they reduce the *frequency* of full physical counts, periodic checks or cycle counts are still necessary for accuracy." }
+                    ]
+                },
+                {
+                    question: "26. What is the primary purpose of holding 'Work-In-Process (WIP)' inventory?",
+                    options: [
+                        { text: "To sell directly to customers.", isCorrect: false, explanation: "WIP is partially finished goods, not ready for direct customer sale." },
+                        { text: "To decouple production stages.", isCorrect: true },
+                        { text: "To hedge against raw material price increases.", isCorrect: false, explanation: "Hedging against raw material price increases applies to raw material inventory." },
+                        { text: "To meet unexpected surges in finished goods demand.", isCorrect: false, explanation: "Meeting finished goods demand is the purpose of finished goods inventory." }
+                    ]
+                },
+                {
+                    question: "27. If the annual holding cost per unit (H) for a product increases, what happens to its EOQ?",
+                    options: [
+                        { text: "It increases.", isCorrect: false, explanation: "As holding costs increase, it becomes more expensive to hold large quantities, so the EOQ (optimal order size) will decrease." },
+                        { text: "It decreases.", isCorrect: true },
+                        { text: "It remains unchanged.", isCorrect: false, explanation: "Holding cost is a direct factor in the EOQ formula, so a change in H will change EOQ." },
+                        { text: "It becomes zero.", isCorrect: false, explanation: "EOQ will not become zero unless demand or ordering cost is zero." }
+                    ]
+                },
+                {
+                    question: "28. What is a key risk associated with a pure Just-in-Time (JIT) inventory system?",
+                    options: [
+                        { text: "Excessive inventory holding costs.", isCorrect: false, explanation: "JIT aims to *reduce* holding costs." },
+                        { text: "High levels of safety stock.", isCorrect: false, explanation: "JIT aims to *minimize* safety stock." },
+                        { text: "Increased vulnerability to supply chain disruptions.", isCorrect: true },
+                        { text: "Difficulty in finding reliable suppliers.", isCorrect: false, explanation: "JIT *requires* highly reliable suppliers, so difficulty finding them is a prerequisite challenge, not a direct risk of the system itself once implemented." }
+                    ]
+                },
+                {
+                    question: "29. The Inventory Turnover Ratio (ITR) is calculated by dividing:",
+                    options: [
+                        { text: "Average Inventory Value by Cost of Goods Sold.", isCorrect: false, explanation: "This is the inverse of ITR, which would give you a measure related to Days Sales of Inventory." },
+                        { text: "Sales Revenue by Ending Inventory.", isCorrect: false, explanation: "ITR uses COGS, not sales revenue, for a more accurate reflection of inventory movement cost." },
+                        { text: "Cost of Goods Sold by Average Inventory Value.", isCorrect: true },
+                        { text: "Beginning Inventory by Ending Inventory.", isCorrect: false, explanation: "This calculation doesn't represent inventory turnover." }
+                    ]
+                },
+                {
+                    question: "30. Why is it important to consider both holding and ordering costs when determining optimal order quantity?",
+                    options: [
+                        { text: "Because they are always equal.", isCorrect: false, explanation: "They are equal *at the EOQ*, but not always." },
+                        { text: "Because they have an inverse relationship, and balancing them minimizes total costs.", isCorrect: true },
+                        { text: "Because only one of them needs to be minimized.", isCorrect: false, explanation: "Minimizing only one would lead to suboptimal total costs (e.g., minimizing ordering cost means large orders, high holding costs)." },
+                        { text: "Because they are the only costs in inventory management.", isCorrect: false, explanation: "Shortage costs are also present, though often not directly in basic EOQ." }
+                    ]
+                },
+                {
+                    question: "31. What is the primary purpose of 'decoupling' production stages by holding inventory?",
+                    options: [
+                        { text: "To increase raw material costs.", isCorrect: false, explanation: "Decoupling aims to improve flow, not increase costs." },
+                        { text: "To allow each stage to operate independently without being affected by delays in other stages.", isCorrect: true },
+                        { text: "To reduce finished goods storage space.", isCorrect: false, explanation: "Decoupling can lead to more WIP, potentially increasing overall storage needs." },
+                        { text: "To speed up customer delivery by eliminating lead time.", isCorrect: false, explanation: "Decoupling helps internal flow, not external lead time to customers." }
+                    ]
+                },
+                {
+                    question: "32. If a company's average daily demand increases, and all other factors remain constant, what will happen to its Reorder Point (ROP)?",
+                    options: [
+                        { text: "It will decrease.", isCorrect: false, explanation: "Higher demand means you'll reach the reorder point sooner, or need a higher reorder point to cover demand during lead time." },
+                        { text: "It will increase.", isCorrect: true },
+                        { text: "It will remain unchanged.", isCorrect: false, explanation: "Average daily demand is a direct input to ROP calculation." },
+                        { text: "It will become equal to safety stock.", isCorrect: false, explanation: "ROP is demand during lead time plus safety stock, not equal to safety stock." }
+                    ]
+                },
+                {
+                    question: "33. Which type of inventory would typically be found on a factory floor, waiting for the next step in the manufacturing process?",
+                    options: [
+                        { text: "Raw Materials.", isCorrect: false, explanation: "Raw materials are unprocessed inputs." },
+                        { text: "Finished Goods.", isCorrect: false, explanation: "Finished goods are ready for sale." },
+                        { text: "Work-In-Process (WIP).", isCorrect: true },
+                        { text: "MRO supplies.", isCorrect: false, explanation: "MRO supplies are for maintenance, repair, and operations, not part of the product itself." }
+                    ]
+                },
+                {
+                    question: "34. The Z-score in advanced safety stock calculations is used to determine the safety stock needed for a desired:",
+                    options: [
+                        { text: "Economic Order Quantity.", isCorrect: false, explanation: "Z-score is for safety stock, not EOQ." },
+                        { text: "Annual demand variability.", isCorrect: false, explanation: "While related to variability, Z-score specifically relates to a desired service level." },
+                        { text: "Service level.", isCorrect: true },
+                        { text: "Ordering cost.", isCorrect: false, explanation: "Z-score is not related to ordering cost." }
+                    ]
+                },
+                {
+                    question: "35. What is the main disadvantage of a periodic inventory system compared to a perpetual system?",
+                    options: [
+                        { text: "It requires more frequent physical counts.", isCorrect: false, explanation: "Periodic systems rely on *less* frequent, but comprehensive, physical counts." },
+                        { text: "It provides less real-time inventory information.", isCorrect: true },
+                        { text: "It is more expensive to implement.", isCorrect: false, explanation: "Periodic systems are generally cheaper to implement due to less technology and continuous tracking." },
+                        { text: "It is more prone to shrinkage.", isCorrect: false, explanation: "While shrinkage can occur, perpetual systems often help *detect* it more readily due to continuous tracking." }
+                    ]
+                },
+                {
+                    question: "36. When using ABC Analysis, what is the primary criterion for classifying items into A, B, or C categories?",
+                    options: [
+                        { text: "Physical size of the item.", isCorrect: false, explanation: "Size is not the primary criterion." },
+                        { text: "Supplier lead time.", isCorrect: false, explanation: "Lead time is a factor in ROP, not ABC classification." },
+                        { text: "Annual usage value.", isCorrect: true },
+                        { text: "Number of units sold per day.", isCorrect: false, explanation: "While related to demand, ABC uses the *monetary value* of annual usage." }
+                    ]
+                },
+                {
+                    question: "37. What is the primary reason for holding inventory as a 'hedge against price increases'?",
+                    options: [
+                        { text: "To reduce storage costs.", isCorrect: false, explanation: "Holding more inventory typically increases storage costs." },
+                        { text: "To ensure product freshness.", isCorrect: false, explanation: "This applies to perishable goods, not hedging against price increases." },
+                        { text: "To buy in bulk before prices rise, securing lower costs.", isCorrect: true },
+                        { text: "To improve inventory turnover.", isCorrect: false, explanation: "This strategy might temporarily reduce turnover by holding more stock." }
+                    ]
+                },
+                {
+                    question: "38. If a company's Days Sales of Inventory (DSI) increases significantly, what might this suggest?",
+                    options: [
+                        { text: "Improved sales performance.", isCorrect: false, explanation: "Increased DSI means it's taking *longer* to sell inventory, suggesting weaker sales or overstocking." },
+                        { text: "More efficient inventory management.", isCorrect: false, explanation: "Increased DSI indicates *less* efficient inventory management." },
+                        { text: "Slow-moving or obsolete inventory.", isCorrect: true },
+                        { text: "Reduced carrying costs.", isCorrect: false, explanation: "Holding inventory longer (higher DSI) typically *increases* carrying costs." }
+                    ]
+                },
+                {
+                    question: "39. The Pareto Principle, often applied in ABC Analysis, states that:",
+                    options: [
+                        { text: "All inventory items are equally important.", isCorrect: false, explanation: "The Pareto Principle states the opposite: a small percentage is most important." },
+                        { text: "80% of costs come from 20% of suppliers.", isCorrect: false, explanation: "While a form of Pareto, in ABC it applies to items and value." },
+                        { text: "A small percentage of causes leads to a large percentage of effects.", isCorrect: true },
+                        { text: "Inventory should always be kept at 80% capacity.", isCorrect: false, explanation: "This is not related to the Pareto Principle." }
+                    ]
+                },
+                {
+                    question: "40. Which of the following is NOT an assumption of the basic Economic Order Quantity (EOQ) model?",
+                    options: [
+                        { text: "Demand is constant.", isCorrect: false, explanation: "This *is* an assumption." },
+                        { text: "Lead time is constant.", isCorrect: false, explanation: "This *is* an assumption." },
+                        { text: "Ordering costs are fixed per order.", isCorrect: false, explanation: "This *is* an assumption." },
+                        { text: "Quantity discounts are available and considered.", isCorrect: true }
+                    ]
+                },
+                {
+                    question: "41. What is the opportunity cost of having capital tied up in inventory?",
+                    options: [
+                        { text: "The cost of transporting the inventory.", isCorrect: false, explanation: "Transportation is an ordering cost." },
+                        { text: "The potential return on investment if the capital were used elsewhere.", isCorrect: true },
+                        { text: "The cost of insuring the inventory.", isCorrect: false, explanation: "Insurance is a holding cost, but not the 'opportunity cost' of capital." },
+                        { text: "The cost of storing the inventory.", isCorrect: false, explanation: "Storage is a holding cost, but not the 'opportunity cost' of capital." }
+                    ]
+                },
+                {
+                    question: "42. A higher desired service level typically results in:",
+                    options: [
+                        { text: "Lower safety stock.", isCorrect: false, explanation: "Higher service level means you want to meet more demand, requiring more buffer (safety stock)." },
+                        { text: "Reduced lead time.", isCorrect: false, explanation: "Service level is an outcome, not a cause of reduced lead time." },
+                        { text: "Increased safety stock.", isCorrect: true },
+                        { text: "Decreased ordering costs.", isCorrect: false, explanation: "Service level doesn't directly impact ordering costs." }
+                    ]
+                },
+                {
+                    question: "43. Which of the following best describes 'Finished Goods' inventory?",
+                    options: [
+                        { text: "Materials purchased for use in production.", isCorrect: false, explanation: "This describes raw materials." },
+                        { text: "Partially completed products in the manufacturing process.", isCorrect: false, explanation: "This describes Work-In-Process (WIP)." },
+                        { text: "Products ready for sale to customers.", isCorrect: true },
+                        { text: "Supplies used for maintenance and repair.", isCorrect: false, explanation: "This describes MRO supplies." }
+                    ]
+                },
+                {
+                    question: "44. How does ICT systems primarily support inventory management?",
+                    options: [
+                        { text: "By physically moving inventory in the warehouse.", isCorrect: false, explanation: "ICT systems manage data and processes, not physical movement directly (though they can control automated systems)." },
+                        { text: "By providing real-time data and automating processes.", isCorrect: true },
+                        { text: "By directly negotiating prices with suppliers.", isCorrect: false, explanation: "ICT systems can *facilitate* negotiation by providing data, but don't negotiate themselves." },
+                        { text: "By eliminating the need for human oversight.", isCorrect: false, explanation: "ICT systems enhance, but don't eliminate, human oversight in complex processes like inventory." }
+                    ]
+                },
+                {
+                    question: "45. What is a 'backorder' in inventory management?",
+                    options: [
+                        { text: "An order that has been canceled by the customer.", isCorrect: false, explanation: "A canceled order is simply that, not a backorder." },
+                        { text: "An order for a product that is currently out of stock but will be fulfilled later.", isCorrect: true },
+                        { text: "An order placed ahead of time for future delivery.", isCorrect: false, explanation: "This is a pre-order or scheduled order." },
+                        { text: "An order that has been returned by a customer.", isCorrect: false, explanation: "This is a return." }
+                    ]
+                },
+                {
+                    question: "46. The primary goal of minimizing inventory is to:",
+                    options: [
+                        { text: "Increase the risk of stockouts.", isCorrect: false, explanation: "Minimizing inventory without careful management *can* increase stockout risk, but it's not the *goal*." },
+                        { text: "Reduce holding costs and free up capital.", isCorrect: true },
+                        { text: "Maximize the number of orders placed.", isCorrect: false, explanation: "Minimizing inventory often means smaller, more frequent orders, but the goal isn't to maximize orders." },
+                        { text: "Complicate supply chain operations.", isCorrect: false, explanation: "The goal is efficiency, not complication." }
+                    ]
+                },
+                {
+                    question: "47. Which inventory cost is often the most difficult to quantify accurately?",
+                    options: [
+                        { text: "Holding costs.", isCorrect: false, explanation: "Holding costs can be calculated with reasonable accuracy (storage, insurance, etc.)." },
+                        { text: "Ordering costs.", isCorrect: false, explanation: "Ordering costs are typically fixed and easily quantifiable per order." },
+                        { text: "Shortage (stockout) costs.", isCorrect: true },
+                        { text: "Purchase costs.", isCorrect: false, explanation: "Purchase costs are the direct cost of buying the goods." }
+                    ]
+                },
+                {
+                    question: "48. What is the relationship between inventory levels and customer satisfaction?",
+                    options: [
+                        { text: "Higher inventory always leads to lower customer satisfaction.", isCorrect: false, explanation: "Excessive inventory can lead to old stock, but generally, sufficient inventory improves satisfaction." },
+                        { text: "Lower inventory always leads to higher customer satisfaction.", isCorrect: false, explanation: "Lower inventory can lead to stockouts and dissatisfaction." },
+                        { text: "Appropriate inventory levels balance availability with cost, impacting satisfaction.", isCorrect: true },
+                        { text: "There is no relationship between inventory and customer satisfaction.", isCorrect: false, explanation: "There is a direct relationship: too little inventory leads to stockouts, too much can lead to old products." }
+                    ]
+                },
+                {
+                    question: "49. What is the primary purpose of 'Raw Materials' inventory?",
+                    options: [
+                        { text: "To sell directly to end consumers.", isCorrect: false, explanation: "Raw materials are inputs for production, not typically sold directly." },
+                        { text: "To be used as inputs in the production process.", isCorrect: true },
+                        { text: "To serve as a buffer for finished goods demand.", isCorrect: false, explanation: "Finished goods inventory serves this purpose." },
+                        { text: "To maintain machinery and equipment.", isCorrect: false, explanation: "MRO supplies serve this purpose." }
+                    ]
+                },
+                {
+                    question: "50. Which of the following scenarios would likely lead to a *decrease* in the calculated EOQ?",
+                    options: [
+                        { text: "A decrease in holding cost per unit.", isCorrect: false, explanation: "A decrease in holding cost would *increase* EOQ because it becomes cheaper to hold more." },
+                        { text: "An increase in annual demand.", isCorrect: false, explanation: "An increase in demand would *increase* EOQ." },
+                        { text: "An increase in holding cost per unit.", isCorrect: true },
+                        { text: "A decrease in ordering cost per order.", isCorrect: false, explanation: "A decrease in ordering cost would *decrease* EOQ because it's cheaper to order more frequently in smaller batches." }
+                    ]
+                }
+
+                
             ];
 
             const calculationQuestions = [
@@ -1050,8 +1412,833 @@
                         <strong>Answer:</strong> The Average Inventory Value is <strong>$90,000</strong>.
                     `
                 }
-                // NOTE: This is a sample set of 10 questions. To reach 50+ as requested,
-                // you would add more question objects following this structure.
+                // Add these to your existing calculationQuestions array in index.html
+
+                {
+                    question: "11. A small electronics store sells 1,800 units of a specific USB drive annually. The cost to place an order is $45, and the annual holding cost per USB drive is $0.90. What is the Economic Order Quantity (EOQ)?",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 1,800 units</li>
+                            <li>Ordering Cost (S) = $45 per order</li>
+                            <li>Holding Cost (H) = $0.90 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 1,800 &times; 45) / 0.90)<br>
+                        EOQ = &radic;(162,000 / 0.90)<br>
+                        EOQ = &radic;(180,000)<br>
+                        EOQ &approx; 424.26<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately <strong>424.26 units</strong>.
+                    `
+                },
+                {
+                    question: "12. A daily average of 15 units of a critical spare part are used. The lead time for this part is consistently 6 days. What is the Reorder Point (ROP) if no safety stock is held?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = Average Daily Demand &times; Lead Time<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Average Daily Demand = 15 units</li>
+                            <li>Lead Time = 6 days</li>
+                            <li>Safety Stock = 0 units</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ROP = 15 &times; 6<br>
+                        ROP = 90<br><br>
+
+                        <strong>Answer:</strong> The Reorder Point (ROP) is **90 units**.
+                    `
+                },
+                {
+                    question: "13. A company's Cost of Goods Sold (COGS) for the year was $750,000. Their beginning inventory was $90,000 and ending inventory was $110,000. Calculate their Days Sales of Inventory (DSI).",
+                    solution: `
+                        <strong>Step 1: Calculate Average Inventory Value</strong><br>
+                        <strong>Formula:</strong> Average Inventory Value = (Beginning Inventory Value + Ending Inventory Value) / 2<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Beginning Inventory = $90,000</li>
+                            <li>Ending Inventory = $110,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Average Inventory Value = (90,000 + 110,000) / 2 = 200,000 / 2 = 100,000<br><br>
+
+                        <strong>Step 2: Calculate Days Sales of Inventory (DSI)</strong><br>
+                        <strong>Formula:</strong> DSI = (Average Inventory Value / COGS) &times; 365 days<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Inventory = $100,000</li>
+                            <li>COGS = $750,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        DSI = (100,000 / 750,000) &times; 365<br>
+                        DSI = 0.1333 &times; 365<br>
+                        DSI &approx; 48.67<br><br>
+
+                        <strong>Answer:</strong> The Days Sales of Inventory (DSI) is approximately **49 days** (rounded to nearest whole day).
+                    `
+                },
+                {
+                    question: "14. An item has an annual demand of 250 units and a unit cost of $250. What is its Annual Usage Value (AUV)?",
+                    solution: `
+                        <strong>Formula:</strong> AUV = Annual Demand (units) &times; Unit Cost<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand = 250 units</li>
+                            <li>Unit Cost = $250</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        AUV = 250 &times; 250 = 62,500<br><br>
+
+                        <strong>Answer:</strong> The Annual Usage Value (AUV) for the item is **$62,500**.
+                    `
+                },
+                {
+                    question: "15. A company orders 600 units of a product each time. The annual demand is 14,400 units, and the ordering cost per order is $50. What is the annual holding cost per unit (H)?",
+                    solution: `
+                        **Formula:** EOQ = &radic;(2DS/H)<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>Order Quantity (EOQ) = 600 units</li>
+                            <li>Annual Demand (D) = 14,400 units</li>
+                            <li>Ordering Cost (S) = $50 per order</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange formula to solve for H):**<br>
+                        EOQ<sup>2</sup> = (2DS)/H<br>
+                        H = (2DS) / EOQ<sup>2</sup><br>
+                        H = (2 &times; 14,400 &times; 50) / 600<sup>2</sup><br>
+                        H = (1,440,000) / 360,000<br>
+                        H = 4<br><br>
+
+                        **Answer:** The annual holding cost per unit (H) is **$4**.
+                    `
+                },
+                {
+                    question: "16. Average daily demand for a component is 8 units. The maximum daily usage is 10 units. Average lead time is 5 days, and maximum lead time is 7 days. Calculate the safety stock.",
+                    solution: `
+                        <strong>Formula:</strong> Safety Stock = (Maximum Daily Usage &times; Maximum Lead Time) - (Average Daily Usage &times; Average Lead Time)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Maximum Daily Usage = 10 units</li>
+                            <li>Average Daily Usage = 8 units</li>
+                            <li>Maximum Lead Time = 7 days</li>
+                            <li>Average Lead Time = 5 days</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Safety Stock = (10 &times; 7) - (8 &times; 5)<br>
+                        Safety Stock = 70 - 40<br>
+                        Safety Stock = 30<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **30 units**.
+                    `
+                },
+                {
+                    question: "17. A company's COGS is $1,200,000. Their average inventory value is $240,000. What is their Inventory Turnover Ratio (ITR)?",
+                    solution: `
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>COGS = $1,200,000</li>
+                            <li>Average Inventory = $240,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ITR = 1,200,000 / 240,000 = 5<br><br>
+
+                        <strong>Answer:</strong> The Inventory Turnover Ratio (ITR) is **5 times**.
+                    `
+                },
+                {
+                    question: "18. An office supply store uses 5,000 reams of paper annually. The ordering cost is $20 per order, and the holding cost is $0.10 per ream per year. Calculate the EOQ.",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Annual Demand (D) = 5,000 reams</li>
+                            <li>Ordering Cost (S) = $20 per order</li>
+                            <li>Holding Cost (H) = $0.10 per ream per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 5,000 &times; 20) / 0.10)<br>
+                        EOQ = &radic;(200,000 / 0.10)<br>
+                        EOQ = &radic;(2,000,000)<br>
+                        EOQ &approx; 1414.21<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately **1414.21 reams**.
+                    `
+                },
+                {
+                    question: "19. If the ROP is 450 units, the lead time is 9 days, and the safety stock is 100 units, what is the average daily demand?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = (Average Daily Demand &times; Lead Time) + Safety Stock<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>ROP = 450 units</li>
+                            <li>Lead Time = 9 days</li>
+                            <li>Safety Stock = 100 units</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange to solve for Average Daily Demand):**<br>
+                        450 = (Average Daily Demand &times; 9) + 100<br>
+                        450 - 100 = Average Daily Demand &times; 9<br>
+                        350 = Average Daily Demand &times; 9<br>
+                        Average Daily Demand = 350 / 9<br>
+                        Average Daily Demand &approx; 38.89<br><br>
+
+                        <strong>Answer:</strong> The Average Daily Demand is approximately **38.89 units**.
+                    `
+                },
+                {
+                    question: "20. A product costs $50 per unit. The annual holding cost is 20% of the unit cost. If the annual demand is 10,000 units and the ordering cost is $80, calculate the EOQ.",
+                    solution: `
+                        <strong>Step 1: Calculate Holding Cost (H)</strong><br>
+                        H = 20% of Unit Cost = 0.20 &times; $50 = $10 per unit per year<br><br>
+
+                        <strong>Step 2: Calculate EOQ</strong><br>
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 10,000 units</li>
+                            <li>Ordering Cost (S) = $80 per order</li>
+                            <li>Holding Cost (H) = $10 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 10,000 &times; 80) / 10)<br>
+                        EOQ = &radic;(1,600,000 / 10)<br>
+                        EOQ = &radic;(160,000)<br>
+                        EOQ = 400<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is **400 units**.
+                    `
+                },
+                {
+                    question: "21. A company's average inventory value is $75,000. Their COGS for the year was $450,000. Calculate their Days Sales of Inventory (DSI).",
+                    solution: `
+                        <strong>Formula:</strong> DSI = (Average Inventory Value / COGS) &times; 365 days<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Inventory Value = $75,000</li>
+                            <li>COGS = $450,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        DSI = (75,000 / 450,000) &times; 365<br>
+                        DSI = 0.1667 &times; 365<br>
+                        DSI &approx; 60.83<br><br>
+
+                        <strong>Answer:</strong> The Days Sales of Inventory (DSI) is approximately **61 days** (rounded to nearest whole day).
+                    `
+                },
+                {
+                    question: "22. An item has an annual demand of 1,200 units. The ordering cost is $30, and the EOQ is 200 units. What is the annual holding cost per unit (H)?",
+                    solution: `
+                        **Formula:** EOQ = &radic;(2DS/H)<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>EOQ = 200 units</li>
+                            <li>Annual Demand (D) = 1,200 units</li>
+                            <li>Ordering Cost (S) = $30 per order</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange formula to solve for H):**<br>
+                        EOQ<sup>2</sup> = (2DS)/H<br>
+                        H = (2DS) / EOQ<sup>2</sup><br>
+                        H = (2 &times; 1,200 &times; 30) / 200<sup>2</sup><br>
+                        H = (72,000) / 40,000<br>
+                        H = 1.8<br><br>
+
+                        <strong>Answer:</strong> The annual holding cost per unit (H) is **$1.80**.
+                    `
+                },
+                {
+                    question: "23. A company uses 25 units of a product per day on average. The lead time is 4 days. If they want to maintain a safety stock of 20 units, what is the ROP?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = (Average Daily Demand &times; Lead Time) + Safety Stock<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Average Daily Demand = 25 units</li>
+                            <li>Lead Time = 4 days</li>
+                            <li>Safety Stock = 20 units</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ROP = (25 &times; 4) + 20<br>
+                        ROP = 100 + 20<br>
+                        ROP = 120<br><br>
+
+                        <strong>Answer:</strong> The Reorder Point (ROP) is **120 units**.
+                    `
+                },
+                {
+                    question: "24. If a company's Inventory Turnover Ratio (ITR) is 8, and its Average Inventory Value is $150,000, what was its Cost of Goods Sold (COGS)?",
+                    solution: `
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>ITR = 8</li>
+                            <li>Average Inventory Value = $150,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation (rearrange formula to solve for COGS):</strong><br>
+                        COGS = ITR &times; Average Inventory Value<br>
+                        COGS = 8 &times; 150,000<br>
+                        COGS = 1,200,000<br><br>
+
+                        <strong>Answer:</strong> The Cost of Goods Sold (COGS) was **$1,200,000**.
+                    `
+                },
+                {
+                    question: "25. An item has an annual demand of 800 units and a unit cost of $120. Calculate its Annual Usage Value (AUV).",
+                    solution: `
+                        <strong>Formula:</strong> AUV = Annual Demand (units) &times; Unit Cost<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Annual Demand = 800 units</li>
+                            <li>Unit Cost = $120</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        AUV = 800 &times; 120 = 96,000<br><br>
+
+                        <strong>Answer:</strong> The Annual Usage Value (AUV) for the item is **$96,000**.
+                    `
+                },
+                {
+                    question: "26. A retailer has an annual demand of 2,400 units for a popular toy. The ordering cost is $60 per order. If the EOQ is 400 units, what is the annual holding cost per unit?",
+                    solution: `
+                        **Formula:** EOQ = &radic;(2DS/H)<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>EOQ = 400 units</li>
+                            <li>Annual Demand (D) = 2,400 units</li>
+                            <li>Ordering Cost (S) = $60 per order</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange formula to solve for H):**<br>
+                        EOQ<sup>2</sup> = (2DS)/H<br>
+                        H = (2DS) / EOQ<sup>2</sup><br>
+                        H = (2 &times; 2,400 &times; 60) / 400<sup>2</sup><br>
+                        H = (288,000) / 160,000<br>
+                        H = 1.8<br><br>
+
+                        <strong>Answer:</strong> The annual holding cost per unit (H) is **$1.80**.
+                    `
+                },
+                {
+                    question: "27. Average daily usage of a raw material is 100 kg. Maximum daily usage is 130 kg. Average lead time is 3 days, and maximum lead time is 5 days. Calculate the safety stock.",
+                    solution: `
+                        <strong>Formula:</strong> Safety Stock = (Maximum Daily Usage &times; Maximum Lead Time) - (Average Daily Usage &times; Average Lead Time)<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Maximum Daily Usage = 130 kg</li>
+                            <li>Average Daily Usage = 100 kg</li>
+                            <li>Maximum Lead Time = 5 days</li>
+                            <li>Average Lead Time = 3 days</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Safety Stock = (130 &times; 5) - (100 &times; 3)<br>
+                        Safety Stock = 650 - 300<br>
+                        Safety Stock = 350<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **350 kg**.
+                    `
+                },
+                {
+                    question: "28. A company's Beginning Inventory was $200,000 and Ending Inventory was $240,000. Their COGS was $1,320,000. Calculate their Inventory Turnover Ratio (ITR).",
+                    solution: `
+                        <strong>Step 1: Calculate Average Inventory Value</strong><br>
+                        <strong>Formula:</strong> Average Inventory Value = (Beginning Inventory Value + Ending Inventory Value) / 2<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Beginning Inventory = $200,000</li>
+                            <li>Ending Inventory = $240,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Average Inventory Value = (200,000 + 240,000) / 2 = 440,000 / 2 = 220,000<br><br>
+
+                        <strong>Step 2: Calculate Inventory Turnover Ratio (ITR)</strong><br>
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>COGS = $1,320,000</li>
+                            <li>Average Inventory = $220,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ITR = 1,320,000 / 220,000 = 6<br><br>
+
+                        <strong>Answer:</strong> The Inventory Turnover Ratio (ITR) is **6 times**.
+                    `
+                },
+                {
+                    question: "29. A product has an annual demand of 36,000 units. The ordering cost is $150 per order, and the holding cost is $1.20 per unit per year. Calculate the EOQ.",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:**<br>
+                        <ul>
+                            <li>Annual Demand (D) = 36,000 units</li>
+                            <li>Ordering Cost (S) = $150 per order</li>
+                            <li>Holding Cost (H) = $1.20 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 36,000 &times; 150) / 1.20)<br>
+                        EOQ = &radic;(10,800,000 / 1.20)<br>
+                        EOQ = &radic;(9,000,000)<br>
+                        EOQ = 3,000<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is **3,000 units**.
+                    `
+                },
+                {
+                    question: "30. A company aims for a Reorder Point (ROP) of 250 units. Their average daily demand is 20 units and average lead time is 10 days. How much safety stock are they holding?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = (Average Daily Demand &times; Lead Time) + Safety Stock<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>ROP = 250 units</li>
+                            <li>Average Daily Demand = 20 units</li>
+                            <li>Lead Time = 10 days</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange to solve for Safety Stock):**<br>
+                        250 = (20 &times; 10) + Safety Stock<br>
+                        250 = 200 + Safety Stock<br>
+                        Safety Stock = 250 - 200<br>
+                        Safety Stock = 50<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **50 units**.
+                    `
+                },
+                {
+                    question: "31. A product has an annual demand of 4,000 units. The ordering cost is $75, and the holding cost is $0.50 per unit per year. Calculate the EOQ.",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 4,000 units</li>
+                            <li>Ordering Cost (S) = $75 per order</li>
+                            <li>Holding Cost (H) = $0.50 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 4,000 &times; 75) / 0.50)<br>
+                        EOQ = &radic;(600,000 / 0.50)<br>
+                        EOQ = &radic;(1,200,000)<br>
+                        EOQ &approx; 1095.45<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately **1095.45 units**.
+                    `
+                },
+                {
+                    question: "32. A company's average daily demand is 75 units. The lead time is 2 days. If they have no safety stock, what is their ROP?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = Average Daily Demand &times; Lead Time<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Daily Demand = 75 units</li>
+                            <li>Lead Time = 2 days</li>
+                            <li>Safety Stock = 0</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ROP = 75 &times; 2<br>
+                        ROP = 150<br><br>
+
+                        <strong>Answer:</strong> The Reorder Point (ROP) is **150 units**.
+                    `
+                },
+                {
+                    question: "33. A company's COGS is $950,000. Their average inventory value is $190,000. Calculate their Inventory Turnover Ratio (ITR).",
+                    solution: `
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>COGS = $950,000</li>
+                            <li>Average Inventory Value = $190,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ITR = 950,000 / 190,000 = 5<br><br>
+
+                        <strong>Answer:</strong> The Inventory Turnover Ratio (ITR) is **5 times**.
+                    `
+                },
+                {
+                    question: "34. Maximum daily usage for a product is 50 units, average daily usage is 40 units. Maximum lead time is 6 days, average lead time is 4 days. What is the safety stock?",
+                    solution: `
+                        <strong>Formula:</strong> Safety Stock = (Maximum Daily Usage &times; Maximum Lead Time) - (Average Daily Usage &times; Average Lead Time)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Maximum Daily Usage = 50 units</li>
+                            <li>Average Daily Usage = 40 units</li>
+                            <li>Maximum Lead Time = 6 days</li>
+                            <li>Average Lead Time = 4 days</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Safety Stock = (50 &times; 6) - (40 &times; 4)<br>
+                        Safety Stock = 300 - 160<br>
+                        Safety Stock = 140<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **140 units**.
+                    `
+                },
+                {
+                    question: "35. If a company's DSI is 50 days and its COGS is $730,000, what is its average inventory value?",
+                    solution: `
+                        <strong>Formula:</strong> DSI = (Average Inventory Value / COGS) &times; 365 days<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>DSI = 50 days</li>
+                            <li>COGS = $730,000</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange to solve for Average Inventory Value):**<br>
+                        50 = (Average Inventory Value / 730,000) &times; 365<br>
+                        50 / 365 = Average Inventory Value / 730,000<br>
+                        0.136986 &approx; Average Inventory Value / 730,000<br>
+                        Average Inventory Value = 0.136986 &times; 730,000<br>
+                        Average Inventory Value &approx; 100,000<br><br>
+
+                        <strong>Answer:</strong> The Average Inventory Value is approximately **$100,000**.
+                    `
+                },
+                {
+                    question: "36. A product has a unit cost of $10. The annual holding cost is 30% of the unit cost. If the annual demand is 25,000 units and the ordering cost is $40, calculate the EOQ.",
+                    solution: `
+                        <strong>Step 1: Calculate Holding Cost (H)</strong><br>
+                        H = 30% of Unit Cost = 0.30 &times; $10 = $3 per unit per year<br><br>
+
+                        <strong>Step 2: Calculate EOQ</strong><br>
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 25,000 units</li>
+                            <li>Ordering Cost (S) = $40 per order</li>
+                            <li>Holding Cost (H) = $3 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 25,000 &times; 40) / 3)<br>
+                        EOQ = &radic;(2,000,000 / 3)<br>
+                        EOQ = &radic;(666,666.67)<br>
+                        EOQ &approx; 816.50<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately **816.50 units**.
+                    `
+                },
+                {
+                    question: "37. A company has a Reorder Point (ROP) of 180 units. Their average daily demand is 15 units, and they hold 30 units of safety stock. What is their lead time in days?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = (Average Daily Demand &times; Lead Time) + Safety Stock<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>ROP = 180 units</li>
+                            <li>Average Daily Demand = 15 units</li>
+                            <li>Safety Stock = 30 units</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange to solve for Lead Time):**<br>
+                        180 = (15 &times; Lead Time) + 30<br>
+                        180 - 30 = 15 &times; Lead Time<br>
+                        150 = 15 &times; Lead Time<br>
+                        Lead Time = 150 / 15<br>
+                        Lead Time = 10<br><br>
+
+                        <strong>Answer:</strong> The Lead Time is **10 days**.
+                    `
+                },
+                {
+                    question: "38. A company's Beginning Inventory was $150,000 and Ending Inventory was $170,000. Their COGS was $960,000. Calculate their Days Sales of Inventory (DSI).",
+                    solution: `
+                        <strong>Step 1: Calculate Average Inventory Value</strong><br>
+                        <strong>Formula:</strong> Average Inventory Value = (Beginning Inventory Value + Ending Inventory Value) / 2<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Beginning Inventory = $150,000</li>
+                            <li>Ending Inventory = $170,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Average Inventory Value = (150,000 + 170,000) / 2 = 320,000 / 2 = 160,000<br><br>
+
+                        <strong>Step 2: Calculate Days Sales of Inventory (DSI)</strong><br>
+                        <strong>Formula:</strong> DSI = (Average Inventory Value / COGS) &times; 365 days<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Inventory = $160,000</li>
+                            <li>COGS = $960,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        DSI = (160,000 / 960,000) &times; 365<br>
+                        DSI = 0.1667 &times; 365<br>
+                        DSI &approx; 60.83<br><br>
+
+                        <strong>Answer:</strong> The Days Sales of Inventory (DSI) is approximately **61 days** (rounded to nearest whole day).
+                    `
+                },
+                {
+                    question: "39. An item has an annual demand of 600 units and a unit cost of $75. What is its Annual Usage Value (AUV)?",
+                    solution: `
+                        <strong>Formula:</strong> AUV = Annual Demand (units) &times; Unit Cost<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand = 600 units</li>
+                            <li>Unit Cost = $75</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        AUV = 600 &times; 75 = 45,000<br><br>
+
+                        <strong>Answer:</strong> The Annual Usage Value (AUV) for the item is **$45,000**.
+                    `
+                },
+                {
+                    question: "40. If the EOQ for a product is 250 units, the annual demand is 15,000 units, and the holding cost is $1.00 per unit per year, what is the ordering cost per order (S)?",
+                    solution: `
+                        **Formula:** EOQ = &radic;(2DS/H)<br>
+                        **Given:**<br>
+                        <ul>
+                            <li>EOQ = 250 units</li>
+                            <li>Annual Demand (D) = 15,000 units</li>
+                            <li>Holding Cost (H) = $1.00 per unit per year</li>
+                        </ul>
+                        <br>
+                        **Calculation (rearrange formula to solve for S):**<br>
+                        EOQ<sup>2</sup> = (2DS)/H<br>
+                        S = (EOQ<sup>2</sup> &times; H) / (2D)<br>
+                        S = (250<sup>2</sup> &times; 1.00) / (2 &times; 15,000)<br>
+                        S = (62,500 &times; 1) / 30,000<br>
+                        S = 62,500 / 30,000<br>
+                        S &approx; 2.08<br><br>
+
+                        <strong>Answer:</strong> The ordering cost per order (S) is approximately **$2.08**.
+                    `
+                },
+                {
+                    question: "41. Average daily demand for a product is 30 units. Maximum daily usage is 35 units. Average lead time is 7 days, and maximum lead time is 9 days. Calculate the safety stock.",
+                    solution: `
+                        <strong>Formula:</strong> Safety Stock = (Maximum Daily Usage &times; Maximum Lead Time) - (Average Daily Usage &times; Average Lead Time)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Maximum Daily Usage = 35 units</li>
+                            <li>Average Daily Usage = 30 units</li>
+                            <li>Maximum Lead Time = 9 days</li>
+                            <li>Average Lead Time = 7 days</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Safety Stock = (35 &times; 9) - (30 &times; 7)<br>
+                        Safety Stock = 315 - 210<br>
+                        Safety Stock = 105<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **105 units**.
+                    `
+                },
+                {
+                    question: "42. A company's COGS is $2,000,000. Their Beginning Inventory was $300,000 and Ending Inventory was $350,000. Calculate their Inventory Turnover Ratio (ITR).",
+                    solution: `
+                        <strong>Step 1: Calculate Average Inventory Value</strong><br>
+                        <strong>Formula:</strong> Average Inventory Value = (Beginning Inventory Value + Ending Inventory Value) / 2<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Beginning Inventory = $300,000</li>
+                            <li>Ending Inventory = $350,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Average Inventory Value = (300,000 + 350,000) / 2 = 650,000 / 2 = 325,000<br><br>
+
+                        <strong>Step 2: Calculate Inventory Turnover Ratio (ITR)</strong><br>
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>COGS = $2,000,000</li>
+                            <li>Average Inventory = $325,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ITR = 2,000,000 / 325,000 &approx; 6.15<br><br>
+
+                        <strong>Answer:</strong> The Inventory Turnover Ratio (ITR) is approximately **6.15 times**.
+                    `
+                },
+                {
+                    question: "43. A product has an annual demand of 1,000 units. The ordering cost is $25, and the holding cost is $0.50 per unit per year. Calculate the EOQ.",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 1,000 units</li>
+                            <li>Ordering Cost (S) = $25 per order</li>
+                            <li>Holding Cost (H) = $0.50 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 1,000 &times; 25) / 0.50)<br>
+                        EOQ = &radic;(50,000 / 0.50)<br>
+                        EOQ = &radic;(100,000)<br>
+                        EOQ = 316.23<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately **316.23 units**.
+                    `
+                },
+                {
+                    question: "44. A company uses 50 units of a raw material per day. The lead time from the supplier is 8 days. They maintain a safety stock of 100 units. What is their Reorder Point (ROP)?",
+                    solution: `
+                        <strong>Formula:</strong> ROP = (Average Daily Demand &times; Lead Time) + Safety Stock<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Daily Demand = 50 units</li>
+                            <li>Lead Time = 8 days</li>
+                            <li>Safety Stock = 100 units</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        ROP = (50 &times; 8) + 100<br>
+                        ROP = 400 + 100<br>
+                        ROP = 500<br><br>
+
+                        <strong>Answer:</strong> The Reorder Point (ROP) is **500 units**.
+                    `
+                },
+                {
+                    question: "45. If a company's Inventory Turnover Ratio (ITR) is 7, and its COGS is $1,050,000, what is its Average Inventory Value?",
+                    solution: `
+                        <strong>Formula:</strong> ITR = COGS / Average Inventory Value<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>ITR = 7</li>
+                            <li>COGS = $1,050,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation (rearrange formula to solve for Average Inventory Value):</strong><br>
+                        Average Inventory Value = COGS / ITR<br>
+                        Average Inventory Value = 1,050,000 / 7<br>
+                        Average Inventory Value = 150,000<br><br>
+
+                        <strong>Answer:</strong> The Average Inventory Value is **$150,000**.
+                    `
+                },
+                {
+                    question: "46. An item has an annual demand of 1,500 units and a unit cost of $30. Calculate its Annual Usage Value (AUV).",
+                    solution: `
+                        <strong>Formula:</strong> AUV = Annual Demand (units) &times; Unit Cost<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand = 1,500 units</li>
+                            <li>Unit Cost = $30</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        AUV = 1,500 &times; 30 = 45,000<br><br>
+
+                        <strong>Answer:</strong> The Annual Usage Value (AUV) for the item is **$45,000**.
+                    `
+                },
+                {
+                    question: "47. A company's average daily demand is 12 units. The maximum daily usage is 15 units. Average lead time is 5 days, and maximum lead time is 8 days. Calculate the safety stock.",
+                    solution: `
+                        <strong>Formula:</strong> Safety Stock = (Maximum Daily Usage &times; Maximum Lead Time) - (Average Daily Usage &times; Average Lead Time)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Maximum Daily Usage = 15 units</li>
+                            <li>Average Daily Usage = 12 units</li>
+                            <li>Maximum Lead Time = 8 days</li>
+                            <li>Average Lead Time = 5 days</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Safety Stock = (15 &times; 8) - (12 &times; 5)<br>
+                        Safety Stock = 120 - 60<br>
+                        Safety Stock = 60<br><br>
+
+                        <strong>Answer:</strong> The Safety Stock is **60 units**.
+                    `
+                },
+                {
+                    question: "48. A product has an annual demand of 50,000 units. The ordering cost is $100 per order, and the holding cost is $0.75 per unit per year. Calculate the EOQ.",
+                    solution: `
+                        <strong>Formula:</strong> EOQ = &radic;(2DS/H)<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Annual Demand (D) = 50,000 units</li>
+                            <li>Ordering Cost (S) = $100 per order</li>
+                            <li>Holding Cost (H) = $0.75 per unit per year</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        EOQ = &radic;((2 &times; 50,000 &times; 100) / 0.75)<br>
+                        EOQ = &radic;(10,000,000 / 0.75)<br>
+                        EOQ = &radic;(13,333,333.33)<br>
+                        EOQ &approx; 3651.48<br><br>
+
+                        <strong>Answer:</strong> The Economic Order Quantity (EOQ) is approximately **3651.48 units**.
+                    `
+                },
+                {
+                    question: "49. A company's COGS is $850,000. Their beginning inventory was $110,000 and ending inventory was $130,000. Calculate their Days Sales of Inventory (DSI).",
+                    solution: `
+                        <strong>Step 1: Calculate Average Inventory Value</strong><br>
+                        <strong>Formula:</strong> Average Inventory Value = (Beginning Inventory Value + Ending Inventory Value) / 2<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Beginning Inventory = $110,000</li>
+                            <li>Ending Inventory = $130,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        Average Inventory Value = (110,000 + 130,000) / 2 = 240,000 / 2 = 120,000<br><br>
+
+                        <strong>Step 2: Calculate Days Sales of Inventory (DSI)</strong><br>
+                        <strong>Formula:</strong> DSI = (Average Inventory Value / COGS) &times; 365 days<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>Average Inventory = $120,000</li>
+                            <li>COGS = $850,000</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        DSI = (120,000 / 850,000) &times; 365<br>
+                        DSI = 0.141176 &times; 365<br>
+                        DSI &approx; 51.53<br><br>
+
+                        <strong>Answer:</strong> The Days Sales of Inventory (DSI) is approximately **52 days** (rounded to nearest whole day).
+                    `
+                },
+                {
+                    question: "50. If a company's Reorder Point (ROP) is 100 units, their lead time is 4 days, and they hold no safety stock, what is their average daily demand?",
+                    solution: `
+                        <strong>Formula (without Safety Stock):</strong> ROP = Average Daily Demand &times; Lead Time<br>
+                        <strong>Given:</strong><br>
+                        <ul>
+                            <li>ROP = 100 units</li>
+                            <li>Lead Time = 4 days</li>
+                            <li>Safety Stock = 0</li>
+                        </ul>
+                        <br>
+                        <strong>Calculation:</strong><br>
+                        100 = Average Daily Demand &times; 4<br>
+                        Average Daily Demand = 100 / 4<br>
+                        Average Daily Demand = 25<br><br>
+
+                        <strong>Answer:</strong> The Average Daily Demand is **25 units**.
+                    `
+                }
+
             ];
 
             let currentTheoryQuestionIndex = 0;
